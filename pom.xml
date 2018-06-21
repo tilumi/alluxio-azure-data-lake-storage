@@ -9,15 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <alluxio.version>1.7.1</alluxio.version>
+        <hadoop.version>2.7.3</hadoop.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.alluxio/alluxio-underfs-hdfs -->
-        <dependency>
-            <groupId>org.alluxio</groupId>
-            <artifactId>alluxio-underfs-hdfs</artifactId>
-            <version>${alluxio.version}</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.alluxio</groupId>
             <artifactId>alluxio-core-common</artifactId>
@@ -29,6 +24,17 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-azure-datalake</artifactId>
             <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>${hadoop.version}</version>
         </dependency>
     </dependencies>
 
