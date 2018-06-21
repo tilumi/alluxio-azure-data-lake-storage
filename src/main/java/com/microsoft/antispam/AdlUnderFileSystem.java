@@ -178,19 +178,20 @@ public class AdlUnderFileSystem extends BaseUnderFileSystem
 
 
   public OutputStream createDirect(String path, CreateOptions options) throws IOException {
-    IOException te = null;
-    RetryPolicy retryPolicy = new CountingRetry(MAX_TRY);
-    while (retryPolicy.attemptRetry()) {
-      try {
-        // TODO(chaomin): support creating HDFS files with specified block size and replication.
-        return new HdfsUnderFileOutputStream(FileSystem.create(mFileSystem, new Path(path),
-                new FsPermission(options.getMode().toShort())));
-      } catch (IOException e) {
-        LOG.warn("Retry count {} : {} ", retryPolicy.getRetryCount(), e.getMessage());
-        te = e;
-      }
-    }
-    throw te;
+//    IOException te = null;
+//    RetryPolicy retryPolicy = new CountingRetry(MAX_TRY);
+//    while (retryPolicy.attemptRetry()) {
+//      try {
+//        // TODO(chaomin): support creating HDFS files with specified block size and replication.
+//        return new HdfsUnderFileOutputStream(FileSystem.create(mFileSystem, new Path(path),
+//                new FsPermission(options.getMode().toShort())));
+//      } catch (IOException e) {
+//        LOG.warn("Retry count {} : {} ", retryPolicy.getRetryCount(), e.getMessage());
+//        te = e;
+//      }
+//    }
+//    throw te;
+    throw new UnsupportedOperationException("createDirect us not supported");
   }
 
 
