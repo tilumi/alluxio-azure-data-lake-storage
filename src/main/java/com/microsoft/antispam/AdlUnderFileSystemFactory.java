@@ -9,7 +9,7 @@
  * See the NOTICE file distributed with this work for information regarding copyright ownership.
  */
 
-package com.micrsoft.antispam;
+package com.microsoft.antispam;
 
 import alluxio.AlluxioURI;
 import alluxio.underfs.UnderFileSystem;
@@ -17,7 +17,6 @@ import alluxio.underfs.UnderFileSystemConfiguration;
 import alluxio.underfs.UnderFileSystemFactory;
 import com.google.common.base.Preconditions;
 
-import javax.annotation.Nullable;
 import javax.annotation.concurrent.ThreadSafe;
 
 /**
