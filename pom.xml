@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <alluxio.version>1.7.1</alluxio.version>
-        <hadoop.version>2.7.3</hadoop.version>
+        <hadoop.version>2.8.3</hadoop.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.alluxio/alluxio-underfs-hdfs -->
